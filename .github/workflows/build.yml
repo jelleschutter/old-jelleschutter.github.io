@@ -1,9 +1,9 @@
 name: 'Build Webpack'
 on:
-  - push:
+  push:
     branches:
       - master
-  - page_build
+  page_build
 
 jobs:
   build:
