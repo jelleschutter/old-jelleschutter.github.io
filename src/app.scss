@@ -2,8 +2,16 @@
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background: #ece5ba;
-    color: #01152d;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+
+    &.front {
+        background: #ece5ba;
+        color: #01152d;
+    }
 }
 
 .center {
@@ -12,9 +20,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-
-.title {
 }
 
 .title-bar {
