@@ -1,0 +1,22 @@
+name: 'Build Webpack'
+on:
+  - push:
+    branches:
+      - master
+  - page_build
+
+jobs:
+  build:
+    name: 'Build'
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout V2'
+      uses: actions/checkout@v2
+    - name: 'NPM Build'
+      uses: actions/setup-node@v1
+      run: |
+        npm install
+        npm run build
+
+
+
