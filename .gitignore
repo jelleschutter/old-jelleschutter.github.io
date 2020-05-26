@@ -1,4 +1,5 @@
 node_modules/
 
-docs/*
-!docs/index.html
+build/*
+!build/index.html
+!build/CNAME
