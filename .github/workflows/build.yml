@@ -12,11 +12,13 @@ jobs:
     steps:
     - name: 'Checkout V2'
       uses: actions/checkout@v2
-    - name: 'NPM Build'
+    - name: 'Install Node.js'
       uses: actions/setup-node@v1
-      run: |
-        npm install
-        npm run build
+    - name: 'NPM Install'
+      run: npm install
+    - name: 'NPM Build'
+      run: npm run build
+
 
 
 
