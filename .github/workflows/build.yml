@@ -18,7 +18,7 @@ jobs:
     - name: 'NPM Build'
       run: npm run prod
     - name: 'Update Sitemap'
-      uses: jelleschutter/update-sitemap-action@v1.0
+      uses: jelleschutter/update-sitemap-action@master
     - name: 'Deploy'
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
