@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - development
-  page_build:
 
 jobs:
   build:
@@ -18,12 +17,8 @@ jobs:
       run: npm install
     - name: 'NPM Build'
       run: npm run prod
-    - name: 'Get Date'
-      run: echo "::set-env name=currentTime::$(date --iso-8601=seconds)"
     - name: 'Update Sitemap'
-      uses: Mudlet/xmlstarlet-action@v1.1
-      with:
-        args: ed --inplace -N x="http://www.sitemaps.org/schemas/sitemap/0.9" --update "/x:urlset/x:url/x:lastmod" --value "test"  build/sitemap.xml
+      uses: jelleschutter/update-sitemap-action@v1.0
     - name: 'Deploy'
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
