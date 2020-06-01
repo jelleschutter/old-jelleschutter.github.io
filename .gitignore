@@ -3,5 +3,6 @@ node_modules/
 build/*
 !build/index.html
 !build/CNAME
+!build/sitemap.xml
 
 mix-manifest.json
