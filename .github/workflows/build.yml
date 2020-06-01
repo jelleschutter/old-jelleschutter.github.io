@@ -19,6 +19,7 @@ jobs:
       run: npm run prod
     - name: 'Update Sitemap'
       uses: jelleschutter/update-sitemap-action@master
+    - run: less build/sitemap.xml
     - name: 'Deploy'
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
